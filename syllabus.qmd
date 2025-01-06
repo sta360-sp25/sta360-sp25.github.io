@@ -1,6 +1,6 @@
 ---
 title: "STA 360: Bayesian methods and modern statistics"
-subtitle: "Fall 2024"
+subtitle: "Spring 2025"
 # mainfont: Lato
 format:
   html: default

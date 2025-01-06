@@ -2,16 +2,16 @@
 
 |                      | Contact                                                     | Office hours         | Location              |
 |------------------|------------------|------------------|------------------|
-| Dr. Alexander Fisher | [aaf29\@duke.edu](aaf29@duke.edu)                           | Mo/We: 10:30-11:30am | Old Chem 223B         |
-| Matt O'Donnell       | [matthew.l.odonnell\@duke.edu](matthew.l.odonnell@duke.edu) | Mo: 5:00-7:00pm      | Old Chem 203B         |
-| Shuo Wang            | [shuo.wang717\@duke.edu](shuo.wang717@duke.edu)             | Tu: 3:00-5:00pm      | Old Chem 203B         |
-| Bo Liu               | [bo.liu1997\@duke.edu](bo.liu1997@duke.edu)                 | We: 12:45-2:45pm     | Old Chem 203B         |
-| Minh-Anh To          | [minhanh.to\@duke.edu](minhanh.to@duke.edu)                 | Fr: 3:00-5:00pm      | Zoom (link on Canvas) |
+| Dr. Alexander Fisher | [aaf29\@duke.edu](aaf29@duke.edu)                           | We/Th/Fr: 10:00-11:00am | Old Chem 223B         |
+| Matt O'Donnell       | [matthew.l.odonnell\@duke.edu](matthew.l.odonnell@duke.edu) |TBD      | Old Chem 203B         |
+| Sophia Yang            | [sophia.yang@duke.edu](sophia.yang@duke.edu)             | TBD      | Old Chem 203B         |
+| Yihao Gu               | [yihao.gu@duke.edu](yihao.gu@duke.edu)                 | TBD     | Old Chem 203B         |
+| Yueqi Guo          | [yueqi.guo@duke.edu](yueqi.guo@duke.edu)                 | TBD      | Old Chem 203B |
 
 #### Meetings
 
 |         |                     |                           |
 |---------|---------------------|---------------------------|
-| Lecture | Mo/We 3:05 - 4:20pm | Reuben-Cooke Building 130 |
-| Lab 01  | Th 1:25pm - 2:40pm  | LSRC A155                 |
-| Lab 02  | Th 3:05pm - 4:20pm  | Old Chemistry 003         |
+| Lecture | We/Fr 11:45am - 1:00pm | Reuben-Cooke Building 130 |
+| Lab 01  | Th 1:25pm - 2:40pm  | Old Chemistry 201               |
+| Lab 02  | Th 3:05pm - 4:20pm  | Old Chemistry 201         |
