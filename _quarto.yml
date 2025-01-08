@@ -11,9 +11,26 @@ project:
 website:
   title: "STA360"
   search: false
-  navbar:
-    background: "#2774AE"
-    left:
+  # navbar:
+  #   background: "#2774AE"
+  #   left:
+  #     - href: index.qmd
+  #       text: schedule
+  #     - href: syllabus.qmd
+  #       text: syllabus
+  #     - href: notes/exam-notes.qmd
+  #       text: distributions
+  #     - href: chapterSummaries.qmd
+  #       text: notes
+  #     - href: links.qmd
+  #       text: links
+        
+  sidebar:
+    id: index
+    logo: "images/sta360.png"
+    style: docked
+    border: false
+    contents: 
       - href: index.qmd
         text: schedule
       - href: syllabus.qmd
@@ -24,12 +41,6 @@ website:
         text: notes
       - href: links.qmd
         text: links
-        
-  # sidebar:
-  #   id: index
-  #   logo: "images/sta360.png"
-  #   style: docked
-  #   border: false
       
 
 format:
