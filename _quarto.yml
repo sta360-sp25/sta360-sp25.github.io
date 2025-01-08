@@ -10,7 +10,7 @@ project:
 
 website:
   title: "STA360"
-  search: true
+  search: false
   navbar:
     background: "#2774AE"
     left:
