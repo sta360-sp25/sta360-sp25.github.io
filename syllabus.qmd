@@ -3,7 +3,8 @@ title: "STA 360: Bayesian methods and modern statistics"
 subtitle: "Spring 2025"
 # mainfont: Lato
 format:
-  html: default
+  html:
+    page-layout: full
   pdf: default
 # format: 
 #    html: 

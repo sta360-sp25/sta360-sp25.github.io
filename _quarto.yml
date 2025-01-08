@@ -10,7 +10,7 @@ project:
 
 website:
   title: "STA360"
-  search: false
+  search: true
   navbar:
     background: "#2774AE"
     left:
@@ -24,6 +24,12 @@ website:
         text: notes
       - href: links.qmd
         text: links
+        
+  # sidebar:
+  #   id: index
+  #   logo: "images/sta360.png"
+  #   style: docked
+  #   border: false
       
 
 format:

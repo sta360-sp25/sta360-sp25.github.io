@@ -1,6 +1,8 @@
 ---
-title: "Bayesian methods and modern statistics"
-subtitle: "Spring 2025"
+# title: "Bayesian methods and modern statistics"
+title: |
+  ![](images/sta360.png){width=1.5in}
+  Bayesian methods and modern statistics
 mainfont: Lato
 format:
    html: 
@@ -8,7 +10,15 @@ format:
     toc: false
 ---
 
+<!-- ::: {.column-margin} -->
+
+<!-- ![](images/sta360.png){width="220"} -->
+
+<!-- ::: -->
+
 # Schedule
+
+**Spring 2025**
 
 ```{r load-libraries, echo = F, message = F, eval = F}
 library(tidyverse)
@@ -67,13 +77,13 @@ schedule %>%
 |:-----------|:-----------|:-----------|:----------:|:----------:|:-----------|
 | 1    | Wed Jan 08 | NO CLASS                                            |         |                                 |                            |
 |      | Thu Jan 09 | lab: welcome                                        |         | [💻](/slides/lab0-welcome.html) | [hello R](/labs/lab0.html) |
-|      | Fri Jan 10 | intro, history, notation                            |  Ch. 2  |                                 | [hw 0](/hw/hw00.html)    |
-| 2    | Wed Jan 15 | probability, exchangeability                        |         |                                 |                            |
+|      | Fri Jan 10 | intro, history, notation                            |  Ch. 2  |                                 | [hw 0](/hw/hw00.html)      |
+| 2    | Wed Jan 15 | probability, exchangeability                        |  Ch. 2  |                                 |                            |
 |      | Thu Jan 16 | lab: MLE                                            |         |                                 |                            |
-|      | Fri Jan 17 | beta-binomial model                                 |         |                                 |                            |
-| 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |         |                                 |                            |
+|      | Fri Jan 17 | beta-binomial model                                 |  Ch. 3  |                                 |                            |
+| 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |  Ch. 3  |                                 |                            |
 |      | Thu Jan 23 |                                                     |         |                                 |                            |
-|      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |         |                                 |                            |
+|      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |  Ch. 3  |                                 |                            |
 | 4    | Wed Jan 29 | intro to Monte Carlo                                |         |                                 |                            |
 |      | Thu Jan 30 |                                                     |         |                                 |                            |
 |      | Fri Jan 31 | predictive checks and MC error                      |         |                                 |                            |
