@@ -4,9 +4,9 @@
 |------------------|------------------|------------------|------------------|
 | Dr. Alexander Fisher | [aaf29\@duke.edu](aaf29@duke.edu)                           | We/Th/Fr: 10:00am-11:00am | Old Chem 223B         |
 | Matt O'Donnell       | [matthew.l.odonnell\@duke.edu](matthew.l.odonnell@duke.edu) | We: 6:00pm-8:00pm      | Old Chem 203B         |
-| Sophia Yang            | [sophia.yang@duke.edu](sophia.yang@duke.edu)             | TBD      | Old Chem 203B         |
-| Yihao Gu               | [yihao.gu@duke.edu](yihao.gu@duke.edu)                 | TBD     | Old Chem 203B         |
-| Yueqi Guo          | [yueqi.guo@duke.edu](yueqi.guo@duke.edu)                 | TBD      | Old Chem 203B |
+| Sophia Yang            | [sophia.yang@duke.edu](sophia.yang@duke.edu)             | Mo: 12:00pm-2:00pm      | Old Chem 203B         |
+| Yihao Gu               | [yihao.gu@duke.edu](yihao.gu@duke.edu)                 | We: 2:30pm-4:30pm     | Old Chem 203B         |
+| Yueqi Guo          | [yueqi.guo@duke.edu](yueqi.guo@duke.edu)                 | Th: 4:30pm-6:30pm      | Old Chem 203B |
 
 #### Meetings
 
