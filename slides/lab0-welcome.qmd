@@ -15,7 +15,7 @@ library(countdown)
 
 -   Introduce yourself (icebreaker)
 
--   Follow along these slides on the course website (under slides): [sta360-fa24.github.io](https://sta360-fa24.github.io)
+-   Follow along these slides on the course website (under slides): [sta360-sp25.github.io](https://sta360-sp25.github.io)
 
 -   Bookmark this!
     It's the course website.
