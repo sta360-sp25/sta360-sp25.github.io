@@ -1,0 +1,30 @@
+/* css styles */
+font-family: Lato
+
+.exercise {
+  table-layout: "true";
+  padding: 1em 1em 1em 4em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #f8f8f8 5px center/3em no-repeat;  
+  border-top: 1px solid #569BBD;    /* openintro::COL[1,1] */ 
+  border-bottom: 1px solid #569BBD; /* openintro::COL[1,1] */ 
+}
+
+.exercise:before {
+  content: "Exercise";
+  clear: right;
+  display: block;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: steelblue;
+}
+
+.exercise:after {
+  content: "Solution";
+  clear: right;
+  display: block;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: steelblue;
+}
