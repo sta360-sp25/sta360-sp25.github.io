@@ -79,17 +79,17 @@ schedule %>%
 ```
 ::: heatMap
 | Week | Date       | Topic                                               | Reading |                                      Notes                                      | Assignment                 |
-|:-----------|:-----------|:-----------|:----------:|:----------:|:-----------|
+|:---------|:---------|:-----------|:--------:|:--------------------:|:---------|
 | 1    | Wed Jan 08 | NO CLASS                                            |         |                                                                                 |                            |
 |      | Thu Jan 09 | lab: welcome                                        |         |                         [💻](/slides/lab0-welcome.html)                         | [hello R](/labs/lab0.html) |
 |      | Fri Jan 10 | intro, history, notation                            |  Ch. 2  |                                                                                 | [hw 0](/hw/hw00.html)      |
 | 2    | Wed Jan 15 | probability, exchangeability                        |  Ch. 2  | [🗒](/notes/lec01-probability.html) [📝](/notes/Probability-Exchangeability.pdf) | [hw 1](/hw/hw01.html)      |
 |      | Thu Jan 16 | lab: MLE                                            |         |                             [💻](/slides/lab1.html)                             |                            |
 |      | Fri Jan 17 | beta-binomial model                                 |  Ch. 3  |        [🗒](/notes/lec02-estimation.html) [📝](/notes/beta-binomial.pdf)         |                            |
-| 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |  Ch. 3  |                [🗒](notes/lec03-Poisson-gamma-exp-families.html)                 |                            |
+| 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |  Ch. 3  |                [🗒](notes/lec03-Poisson-gamma-exp-families.html)                 | [hw 2](/hw/hw02.html)      |
 |      | Thu Jan 23 | lab: exp families and transformations               |         |                       [💻](/slides/lab-exp-families.html)                       |                            |
 |      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |  Ch. 3  |                       [🗒](/notes/lec04-reliability.html)                        |                            |
-| 4    | Wed Jan 29 | intro to Monte Carlo                                |  Ch. 4  |                                                                                 |                            |
+| 4    | Wed Jan 29 | intro to Monte Carlo                                |  Ch. 4  |  [🗒](/notes/lec05-introMonteCarlo.html)                                                                               | hw 3                       |
 |      | Thu Jan 30 | lab: mixture densities                              |         |                                                                                 |                            |
 |      | Fri Jan 31 | predictive checks and MC error                      |  Ch. 4  |                                                                                 |                            |
 | 5    | Wed Feb 05 | the normal model                                    |  Ch. 5  |                                                                                 |                            |
