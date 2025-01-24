@@ -88,7 +88,7 @@ schedule %>%
 |      | Fri Jan 17 | beta-binomial model                                 |  Ch. 3  |        [🗒](/notes/lec02-estimation.html) [📝](/notes/beta-binomial.pdf)         |                            |
 | 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |  Ch. 3  |                [🗒](notes/lec03-Poisson-gamma-exp-families.html)  [📝](/notes/Poisson-gamma-exp-families.pdf)               | [hw 2](/hw/hw02.html)      |
 |      | Thu Jan 23 | lab: exp families and transformations               |         |                       [💻](/slides/lab-exp-families.html)                       |                            |
-|      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |  Ch. 3  |                       [🗒](/notes/lec04-reliability.html)                        |                            |
+|      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |  Ch. 3  |                       [🗒](/notes/lec04-reliability.html) [📝](/notes/reliability-handwritten.pdf)                       |                            |
 | 4    | Wed Jan 29 | intro to Monte Carlo                                |  Ch. 4  |  [🗒](/notes/lec05-introMonteCarlo.html)                                                                               | hw 3                       |
 |      | Thu Jan 30 | lab: mixture densities                              |         |                                                                                 |                            |
 |      | Fri Jan 31 | predictive checks and MC error                      |  Ch. 4  |                                                                                 |                            |
