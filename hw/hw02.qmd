@@ -54,7 +54,7 @@ readr::read_csv("https://sta602-sp25.github.io/data/bird-counts.csv")
 ```
 
 
-In this problem, we will examine the posterior distribution of $\theta$ given these data, under a prior distribution for $\theta$ having density of the form $p(\theta) = c \theta^{a-1} e^{-b\theta}$, where $c$ is a constant that depends on $a$ and $b$ but not $\theta$. For this problem, we will set $a = 2$ and $b = 1/5$. 
+In this problem, we will examine the posterior distribution of $\theta$ given these data, under a prior distribution for $\theta$ having density of the form $p(\theta) = c \theta^{a-1} e^{-b\theta}$, where $c$ is a constant that depends on $a$ and $b$ but not $\theta$. For this problem, we will set $a = 2$ and $b = 1/5$. Assume the same sampling model as in exercise 3.
 
 a. Make a plot of $p(\theta)$ for $\theta \in (0, 50)$ as follows: Compute $\theta^{a -1} e^{-b\theta}$ on an evenly-spaced grid of 1000 $\theta$-values from 0 to 50. Put the results of the computation into a vector of length 1000, then divide the vector by its sum. This vector is a discrete pdf that approximates the continuous density $p(\theta)$.
 
