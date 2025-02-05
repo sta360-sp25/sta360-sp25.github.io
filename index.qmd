@@ -78,55 +78,56 @@ schedule %>%
     .heatMap tr:nth-of-type(3n-1) { background: #D3D3D3; }
 </style>
 ```
+
 ::: heatMap
-| Week | Date       | Topic                                               |               Reading                |                                            Notes                                             | Assignment                 |
+| Week | Date | Topic | Reading | Notes | Assignment |
 |:-----------|:-----------|:-----------|:----------:|:----------:|:-----------|
-| 1    | Wed Jan 08 | NO CLASS                                            |                                      |                                                                                              |                            |
-|      | Thu Jan 09 | lab: welcome                                        |                                      |                               [💻](/slides/lab0-welcome.html)                                | [hello R](/labs/lab0.html) |
-|      | Fri Jan 10 | intro, history, notation                            |                Ch. 2                 |                                                                                              | [hw 0](/hw/hw00.html)      |
-| 2    | Wed Jan 15 | probability, exchangeability                        |                Ch. 2                 |       [🗒](/notes/lec01-probability.html) [📝](/notes/Probability-Exchangeability.pdf)        | [hw 1](/hw/hw01.html)      |
-|      | Thu Jan 16 | lab: MLE                                            |                                      |                                   [💻](/slides/lab1.html)                                    |                            |
-|      | Fri Jan 17 | beta-binomial model                                 |                Ch. 3                 |               [🗒](/notes/lec02-estimation.html) [📝](/notes/beta-binomial.pdf)               |                            |
-| 3    | Wed Jan 22 | Poisson-gamma model, exp families                   |                Ch. 3                 | [🗒](notes/lec03-Poisson-gamma-exp-families.html) [📝](/notes/Poisson-gamma-exp-families.pdf) | [hw 2](/hw/hw02.html)      |
-|      | Thu Jan 23 | lab: exp families and transformations               |                                      |                             [💻](/slides/lab-exp-families.html)                              |                            |
-|      | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) |                Ch. 3                 |         [🗒](/notes/lec04-reliability.html) [📝](/notes/reliability-handwritten.pdf)          |                            |
-| 4    | Wed Jan 29 | intro to Monte Carlo                                | [📖](/readings/introMonteCarlo.html) |                            [🗒](/notes/lec05-introMonteCarlo.html) [📝](/notes/posteriorPredictive.pdf)                           | [hw 3](/hw/hw03.html)      |
-|      | Thu Jan 30 | lab: mixture densities                              |                                      |                               [💻](/slides/lab-mixtures.html)                                |                            |
-|      | Fri Jan 31 | predictive checks and MC error                      |                Ch. 4                 |                       [🗒](/notes/lec06-MonteCarloPredictionError.html) [📝](/notes/predictive-distributions.pdf)                      |                            |
-| 5    | Wed Feb 05 | the normal model                                    |                Ch. 5                 |                              [🗒](/notes/lec07-normalModel.html)                              | hw 4                       |
-|      | Thu Feb 06 | lab: normal data                                    |                                      |                                                                                              |                            |
-|      | Fri Feb 07 | the normal model II                                 |                Ch. 5                 |                                                                                              |                            |
-| 6    | Wed Feb 12 | estimators                                          |                Ch. 5                 |                                                                                              |                            |
-|      | Thu Feb 13 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Feb 14 | review                                              |                                      |                                                                                              |                            |
-| 7    | Wed Feb 19 | Tentative: Exam I                                   |                                      |                                                                                              |                            |
-|      | Thu Feb 20 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Feb 21 | Metropolis algorithm                                |                                      |                                                                                              |                            |
-| 8    | Wed Feb 26 | MCMC diagnostics                                    |                                      |                                                                                              |                            |
-|      | Thu Feb 27 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Feb 28 | diagnostics and MH                                  |                                      |                                                                                              |                            |
-| 9    | Wed Mar 05 | Gibbs sampling                                      |                                      |                                                                                              |                            |
-|      | Thu Mar 06 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Mar 07 | multivariate normal                                 |                                      |                                                                                              |                            |
-| 10   | Wed Mar 12 | NO CLASS                                            |                                      |                                                                                              |                            |
-|      | Thu Mar 13 | NO CLASS                                            |                                      |                                                                                              |                            |
-|      | Fri Mar 14 | NO CLASS                                            |                                      |                                                                                              |                            |
-| 11   | Wed Mar 19 | Bayesian regression I                               |                                      |                                                                                              |                            |
-|      | Thu Mar 20 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Mar 21 | Bayesian regression II                              |                                      |                                                                                              |                            |
-| 12   | Wed Mar 26 | hierarchical modeling                               |                                      |                                                                                              |                            |
-|      | Thu Mar 27 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Mar 28 | review                                              |                                      |                                                                                              |                            |
-| 13   | Wed Apr 02 | Tentative: Exam II                                  |                                      |                                                                                              |                            |
-|      | Thu Apr 03 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Apr 04 | model averaging                                     |                                      |                                                                                              |                            |
-| 14   | Wed Apr 09 | priors                                              |                                      |                                                                                              |                            |
-|      | Thu Apr 10 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Apr 11 | Hamiltonian Monte Carlo                             |                                      |                                                                                              |                            |
-| 15   | Wed Apr 16 | Bayesian inverse problems                           |                                      |                                                                                              |                            |
-|      | Thu Apr 17 |                                                     |                                      |                                                                                              |                            |
-|      | Fri Apr 18 | Special Topic                                       |                                      |                                                                                              |                            |
-| 16   | Wed Apr 23 | Practice for final                                  |                                      |                                                                                              |                            |
+| 1 | Wed Jan 08 | NO CLASS |  |  |  |
+|  | Thu Jan 09 | lab: welcome |  | [💻](/slides/lab0-welcome.html) | [hello R](/labs/lab0.html) |
+|  | Fri Jan 10 | intro, history, notation | Ch. 2 |  | [hw 0](/hw/hw00.html) |
+| 2 | Wed Jan 15 | probability, exchangeability | Ch. 2 | [🗒](/notes/lec01-probability.html) [📝](/notes/Probability-Exchangeability.pdf) | [hw 1](/hw/hw01.html) |
+|  | Thu Jan 16 | lab: MLE |  | [💻](/slides/lab1.html) |  |
+|  | Fri Jan 17 | beta-binomial model | Ch. 3 | [🗒](/notes/lec02-estimation.html) [📝](/notes/beta-binomial.pdf) |  |
+| 3 | Wed Jan 22 | Poisson-gamma model, exp families | Ch. 3 | [🗒](notes/lec03-Poisson-gamma-exp-families.html) [📝](/notes/Poisson-gamma-exp-families.pdf) | [hw 2](/hw/hw02.html) |
+|  | Thu Jan 23 | lab: exp families and transformations |  | [💻](/slides/lab-exp-families.html) |  |
+|  | Fri Jan 24 | reliability (conf. intervals, hpd, Laplace approx.) | Ch. 3 | [🗒](/notes/lec04-reliability.html) [📝](/notes/reliability-handwritten.pdf) |  |
+| 4 | Wed Jan 29 | intro to Monte Carlo | [📖](/readings/introMonteCarlo.html) | [🗒](/notes/lec05-introMonteCarlo.html) [📝](/notes/posteriorPredictive.pdf) | [hw 3](/hw/hw03.html) |
+|  | Thu Jan 30 | lab: mixture densities |  | [💻](/slides/lab-mixtures.html) |  |
+|  | Fri Jan 31 | predictive checks and MC error | Ch. 4 | [🗒](/notes/lec06-MonteCarloPredictionError.html) [📝](/notes/predictive-distributions.pdf) |  |
+| 5 | Wed Feb 05 | the normal model | Ch. 5 | [🗒](/notes/lec07-normalModel.html) | [hw 4](/hw/hw04.html) |
+|  | Thu Feb 06 | lab: normal data |  | [💻](/slides/lab-normal.html) |  |
+|  | Fri Feb 07 | the normal model II | Ch. 5 |  |  |
+| 6 | Wed Feb 12 | estimators | Ch. 5 |  |  |
+|  | Thu Feb 13 |  |  |  |  |
+|  | Fri Feb 14 | review |  |  |  |
+| 7 | Wed Feb 19 | Tentative: Exam I |  |  |  |
+|  | Thu Feb 20 |  |  |  |  |
+|  | Fri Feb 21 | Metropolis algorithm |  |  |  |
+| 8 | Wed Feb 26 | MCMC diagnostics |  |  |  |
+|  | Thu Feb 27 |  |  |  |  |
+|  | Fri Feb 28 | diagnostics and MH |  |  |  |
+| 9 | Wed Mar 05 | Gibbs sampling |  |  |  |
+|  | Thu Mar 06 |  |  |  |  |
+|  | Fri Mar 07 | multivariate normal |  |  |  |
+| 10 | Wed Mar 12 | NO CLASS |  |  |  |
+|  | Thu Mar 13 | NO CLASS |  |  |  |
+|  | Fri Mar 14 | NO CLASS |  |  |  |
+| 11 | Wed Mar 19 | Bayesian regression I |  |  |  |
+|  | Thu Mar 20 |  |  |  |  |
+|  | Fri Mar 21 | Bayesian regression II |  |  |  |
+| 12 | Wed Mar 26 | hierarchical modeling |  |  |  |
+|  | Thu Mar 27 |  |  |  |  |
+|  | Fri Mar 28 | review |  |  |  |
+| 13 | Wed Apr 02 | Tentative: Exam II |  |  |  |
+|  | Thu Apr 03 |  |  |  |  |
+|  | Fri Apr 04 | model averaging |  |  |  |
+| 14 | Wed Apr 09 | priors |  |  |  |
+|  | Thu Apr 10 |  |  |  |  |
+|  | Fri Apr 11 | Hamiltonian Monte Carlo |  |  |  |
+| 15 | Wed Apr 16 | Bayesian inverse problems |  |  |  |
+|  | Thu Apr 17 |  |  |  |  |
+|  | Fri Apr 18 | Special Topic |  |  |  |
+| 16 | Wed Apr 23 | Practice for final |  |  |  |
 :::
 
 <!-- | Week | Date       | Topic                                               | Reading                                                |                                            Notes                                             | Assignment                 | -->
