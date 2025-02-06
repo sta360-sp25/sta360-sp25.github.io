@@ -1621,14 +1621,14 @@
     "href": "slides/lab-normal.html#solution-b",
     "title": "Normal modeling",
     "section": "Solution (b)",
-    "text": "Solution (b)\nb\n\ndemodemo plotsolution codesolution plotsummary\n\n\nDemo with simulated data to make sure code works:\n\n# simulated data\nset.seed(123)\ntrue.theta = 4\ntrue.sigma = 1\nN = 10\nx = seq(from = 1, to = 10, length = N)\ny = rnorm(N, true.theta * x, true.sigma)\n\n# prior parameters\nk0 = 1\nmu0 = 1\n\nsumYX = sum(y * x)\nd = (k0 + sum(x^2))\nmun = (k0 + mu0 + sumYX) / d\ntn = sqrt(1 / d)\n\ntheta.postsample = rnorm(10000, mun, tn)\nhist(theta.postsample)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx = bass$weight\ny = bass$mercury\n\n# prior parameters\nk0 = 1\nmu0 = 1\n\nsumYX = sum(y * x)\nd = (k0 + sum(x^2))\nmun = (k0 + mu0 + sumYX) / d\ntn = sqrt(1 / d)\n\ntheta.postsample = rnorm(10000, mun, tn)\nhist(theta.postsample)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean(theta.postsample)\n\n[1] 0.8370612\n\nquantile(theta.postsample, c(0.025, 0.975))\n\n     2.5%     97.5% \n0.7340858 0.9412182"
+    "text": "Solution (b)\nb\n\ndemodemo plotsolution codesolution plotsummary\n\n\nDemo with simulated data to make sure code works:\n\n# simulated data\nset.seed(123)\ntrue.theta = 4\ntrue.sigma = 1\nN = 10\nx = seq(from = 1, to = 10, length = N)\ny = rnorm(N, true.theta * x, true.sigma)\n\n# prior parameters\nk0 = 1\nmu0 = 0\n\nsumYX = sum(y * x)\nd = (k0 + sum(x^2))\nmun = ((k0 * mu0) + sumYX) / d\ntn = sqrt(1 / d)\n\ntheta.postsample = rnorm(10000, mun, tn)\nhist(theta.postsample)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx = bass$weight\ny = bass$mercury\n\n# prior parameters\nk0 = 1\nmu0 = 0\n\nsumYX = sum(y * x)\nd = (k0 + sum(x^2))\nmun = ((k0 * mu0) + sumYX) / d\ntn = sqrt(1 / d)\n\ntheta.postsample = rnorm(10000, mun, tn)\nhist(theta.postsample)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmean(theta.postsample)\n\n[1] 0.8314533\n\nquantile(theta.postsample, c(0.025, 0.975))\n\n     2.5%     97.5% \n0.7284780 0.9356104"
   },
   {
     "objectID": "slides/lab-normal.html#solution-c",
     "href": "slides/lab-normal.html#solution-c",
     "title": "Normal modeling",
     "section": "Solution (c)",
-    "text": "Solution (c)\n\n# use posterior samples of theta and x = 4 to simulate ytilde\n\nytilde = rnorm(10000, theta.postsample * 4, 1)\nhist(ytilde)\n\nmean(ytilde)\n\n[1] 3.341773\n\n\nThis matches intuition (law of total expectation gives the closed form solution: 4 * 0.838 = 3.352)."
+    "text": "Solution (c)\n\n# use posterior samples of theta and x = 4 to simulate ytilde\n\nytilde = rnorm(10000, theta.postsample * 4, 1)\nhist(ytilde)\n\nmean(ytilde)\n\n[1] 3.319342\n\n\nThis matches intuition (law of total expectation gives the closed form solution: 4 * 0.838 = 3.352)."
   },
   {
     "objectID": "slides/lab-normal.html#solution-d",

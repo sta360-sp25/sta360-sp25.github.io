@@ -492,11 +492,11 @@ Y_i | \theta &amp;\sim \text{ iid  } N(\theta x_i, 1)\\
 <span id="cb6-8"><a></a></span>
 <span id="cb6-9"><a></a><span class="co"># prior parameters</span></span>
 <span id="cb6-10"><a></a>k0 <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb6-11"><a></a>mu0 <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb6-11"><a></a>mu0 <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb6-12"><a></a></span>
 <span id="cb6-13"><a></a>sumYX <span class="ot">=</span> <span class="fu">sum</span>(y <span class="sc">*</span> x)</span>
 <span id="cb6-14"><a></a>d <span class="ot">=</span> (k0 <span class="sc">+</span> <span class="fu">sum</span>(x<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb6-15"><a></a>mun <span class="ot">=</span> (k0 <span class="sc">+</span> mu0 <span class="sc">+</span> sumYX) <span class="sc">/</span> d</span>
+<span id="cb6-15"><a></a>mun <span class="ot">=</span> ((k0 <span class="sc">*</span> mu0) <span class="sc">+</span> sumYX) <span class="sc">/</span> d</span>
 <span id="cb6-16"><a></a>tn <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> d)</span>
 <span id="cb6-17"><a></a></span>
 <span id="cb6-18"><a></a>theta.postsample <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, mun, tn)</span>
@@ -521,11 +521,11 @@ Y_i | \theta &amp;\sim \text{ iid  } N(\theta x_i, 1)\\
 <span id="cb7-3"><a></a></span>
 <span id="cb7-4"><a></a><span class="co"># prior parameters</span></span>
 <span id="cb7-5"><a></a>k0 <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb7-6"><a></a>mu0 <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb7-6"><a></a>mu0 <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb7-7"><a></a></span>
 <span id="cb7-8"><a></a>sumYX <span class="ot">=</span> <span class="fu">sum</span>(y <span class="sc">*</span> x)</span>
 <span id="cb7-9"><a></a>d <span class="ot">=</span> (k0 <span class="sc">+</span> <span class="fu">sum</span>(x<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb7-10"><a></a>mun <span class="ot">=</span> (k0 <span class="sc">+</span> mu0 <span class="sc">+</span> sumYX) <span class="sc">/</span> d</span>
+<span id="cb7-10"><a></a>mun <span class="ot">=</span> ((k0 <span class="sc">*</span> mu0) <span class="sc">+</span> sumYX) <span class="sc">/</span> d</span>
 <span id="cb7-11"><a></a>tn <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> d)</span>
 <span id="cb7-12"><a></a></span>
 <span id="cb7-13"><a></a>theta.postsample <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, mun, tn)</span>
@@ -547,12 +547,12 @@ Y_i | \theta &amp;\sim \text{ iid  } N(\theta x_i, 1)\\
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">mean</span>(theta.postsample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8370612</code></pre>
+<pre><code>[1] 0.8314533</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">quantile</span>(theta.postsample, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     2.5%     97.5% 
-0.7340858 0.9412182 </code></pre>
+0.7284780 0.9356104 </code></pre>
 </div>
 </div>
 </div>
@@ -569,7 +569,7 @@ Y_i | \theta &amp;\sim \text{ iid  } N(\theta x_i, 1)\\
 
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">mean</span>(ytilde)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.341773</code></pre>
+<pre><code>[1] 3.319342</code></pre>
 </div>
 </div>
 <img data-src="lab-normal_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"><p>This matches intuition (law of total expectation gives the closed form solution: 4 * 0.838 = 3.352).</p>
