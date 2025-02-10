@@ -93,7 +93,7 @@ For the Bayesian estimator to have smaller MSE than the MLE, we need
 $$
 \begin{aligned}
  \left(\frac{a}{a+b} - \theta\right)^2 &\leq \frac{\theta(1 - \theta)}{n} \frac{1 + w}{1 - w}\\
- &\leq \frac{\theta(1 - \theta) (2n + a + b)}{n^2}
+ &\leq \frac{\theta(1 - \theta) (2n + a + b)}{n(a+b)}
  \end{aligned}
 $$
 

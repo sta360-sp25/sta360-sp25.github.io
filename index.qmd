@@ -98,7 +98,7 @@ schedule %>%
 |  | Thu Feb 06 | lab: normal data |  | [💻](/slides/lab-normal.html) |  |
 |  | Fri Feb 07 | the normal model II | Ch. 5 | [📝](/notes/normal-notes-written-2.pdf) |  |
 | 6 | Wed Feb 12 | estimators | Ch. 5 | [🗒](notes/lec14-estimators.html) |  |
-|  | Thu Feb 13 |  |  |  |  |
+|  | Thu Feb 13 | lab: estimators |  | [💻](/slides/estimator-lab.html) |  |
 |  | Fri Feb 14 | review |  |  |  |
 | 7 | Wed Feb 19 | Exam I |  |  |  |
 |  | Thu Feb 20 |  |  |  |  |
