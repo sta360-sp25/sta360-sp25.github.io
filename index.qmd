@@ -96,7 +96,7 @@ schedule %>%
 |  | Fri Jan 31 | predictive checks and MC error | Ch. 4 | [🗒](/notes/lec06-MonteCarloPredictionError.html) [📝](/notes/predictive-distributions.pdf) |  |
 | 5 | Wed Feb 05 | the normal model | Ch. 5 | [🗒](/notes/lec07-normalModel.html)[📝](/notes/normal-notes-written-1.pdf) | [hw 4](/hw/hw04.html) |
 |  | Thu Feb 06 | lab: normal data |  | [💻](/slides/lab-normal.html) |  |
-|  | Fri Feb 07 | the normal model II | Ch. 5 |  |  |
+|  | Fri Feb 07 | the normal model II | Ch. 5 | [📝](/notes/normal-notes-written-2.pdf) |  |
 | 6 | Wed Feb 12 | estimators | Ch. 5 | [🗒](notes/lec14-estimators.html) |  |
 |  | Thu Feb 13 |  |  |  |  |
 |  | Fri Feb 14 | review |  |  |  |
