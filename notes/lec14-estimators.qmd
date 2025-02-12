@@ -214,7 +214,7 @@ $$
 <!-- #             sd(bill_length_mm)) -->
 <!-- # ``` -->
 
-- Compute $MSE[\hat{\theta}_e|\theta_0]$ and $MSE[\hat{\theta_b}|\theta_0]$ and plot the ratio $MSE[\hat{\theta}_b]/MSE[\hat{\theta}_e|\theta_0]$ as a function of $n$ for $\kappa_0 = 0, 1, 2, 3$.
+- Compute $MSE[\hat{\theta}_e|\theta_0]$ and $MSE[\hat{\theta_b}|\theta_0]$ and plot the ratio $MSE[\hat{\theta}_b|\theta_0]/MSE[\hat{\theta}_e|\theta_0]$ as a function of $n$ for $\kappa_0 = 0, 1, 2, 3$.
 
 ## plot
 ```{r}
