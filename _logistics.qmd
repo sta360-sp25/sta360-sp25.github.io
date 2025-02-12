@@ -2,7 +2,7 @@
 
 |                      | Contact                                                     | Office hours         | Location              |
 |------------------|------------------|------------------|------------------|
-| Dr. Alexander Fisher | [aaf29\@duke.edu](aaf29@duke.edu)                           | We/Th/Fr: 10:00am-11:00am | Old Chem 223B         |
+| Dr. Alexander Fisher | [aaf29\@duke.edu](aaf29@duke.edu)                           | We/Th/Fr: 10:00am-11:00am | Old Chem 211A/B         |
 | Matt O'Donnell       | [matthew.l.odonnell\@duke.edu](matthew.l.odonnell@duke.edu) | We: 6:00pm-8:00pm      | Old Chem 203B         |
 | Sophia Yang            | [sophia.yang@duke.edu](sophia.yang@duke.edu)             | Mo: 12:00pm-2:00pm      | Old Chem 203B         |
 | Yihao Gu               | [yihao.gu@duke.edu](yihao.gu@duke.edu)                 | We: 2:30pm-4:30pm     | Old Chem 203B         |
