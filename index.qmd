@@ -81,7 +81,7 @@ schedule %>%
 
 ::: heatMap
 | Week | Date | Topic | Reading | Notes | Assignment |
-|:---|:---|:---|:--:|:--:|:---|
+|:-----------|:-----------|:-----------|:----------:|:----------:|:-----------|
 | 1 | Wed Jan 08 | NO CLASS |  |  |  |
 |  | Thu Jan 09 | lab: welcome |  | [💻](/slides/lab0-welcome.html) | [hello R](/labs/lab0.html) |
 |  | Fri Jan 10 | intro, history, notation | Ch. 2 |  | [hw 0](/hw/hw00.html) |
@@ -97,7 +97,7 @@ schedule %>%
 | 5 | Wed Feb 05 | the normal model | Ch. 5 | [🗒](/notes/lec07-normalModel.html)[📝](/notes/normal-notes-written-1.pdf) | [hw 4](/hw/hw04.html) |
 |  | Thu Feb 06 | lab: normal data |  | [💻](/slides/lab-normal.html) |  |
 |  | Fri Feb 07 | the normal model II | Ch. 5 | [📝](/notes/normal-notes-written-2.pdf) |  |
-| 6 | Wed Feb 12 | estimators | Ch. 5 | [🗒](notes/lec14-estimators.html) |  |
+| 6 | Wed Feb 12 | estimators | Ch. 5 | [🗒](notes/lec14-estimators.html)[📝](/notes/estimators.pdf) |  |
 |  | Thu Feb 13 | lab: estimators |  | [💻](/slides/estimator-lab.html) |  |
 |  | Fri Feb 14 | review |  |  |  |
 | 7 | Wed Feb 19 | Exam I |  |  |  |
