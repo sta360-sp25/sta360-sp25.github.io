@@ -100,10 +100,10 @@ schedule %>%
 | 6 | Wed Feb 12 | estimators | Ch. 5 | [🗒](notes/lec14-estimators.html)[📝](/notes/estimators.pdf) |  |
 |  | Thu Feb 13 | lab: estimators |  | [💻](/slides/estimator-lab.html) |  |
 |  | Fri Feb 14 | review |  |  |  |
-| 7 | Wed Feb 19 | Exam I |  |  |  |
+| 7 | Wed Feb 19 | Metropolis algorithm | Ch. 10 | [🗒](/notes/lec08-Metropolis-algorithm.html) |  |
 |  | Thu Feb 20 |  |  |  |  |
-|  | Fri Feb 21 | Metropolis algorithm |  |  |  |
-| 8 | Wed Feb 26 | MCMC diagnostics |  |  |  |
+|  | Fri Feb 21 | Exam I |  |  |  |
+| 8 | Wed Feb 26 | MCMC diagnostics | Ch. 10 |  |  |
 |  | Thu Feb 27 |  |  |  |  |
 |  | Fri Feb 28 | diagnostics and MH |  |  |  |
 | 9 | Wed Mar 05 | Gibbs sampling |  |  |  |
