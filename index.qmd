@@ -104,7 +104,7 @@ schedule %>%
 |  | Thu Feb 20 |  |  |  |  |
 |  | Fri Feb 21 | Exam I |  |  |  |
 | 8 | Wed Feb 26 | MCMC diagnostics | Ch. 10 |  |  |
-|  | Thu Feb 27 |  |  |  |  |
+|  | Thu Feb 27 | NO LAB |  |  |  |
 |  | Fri Feb 28 | diagnostics and MH |  |  |  |
 | 9 | Wed Mar 05 | Gibbs sampling |  |  |  |
 |  | Thu Mar 06 |  |  |  |  |
