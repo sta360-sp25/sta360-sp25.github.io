@@ -103,8 +103,8 @@ schedule %>%
 | 7 | Wed Feb 19 | Metropolis algorithm | Ch. 10 | [🗒](/notes/lec08-Metropolis-algorithm.html) |  |
 |  | Thu Feb 20 | NO LAB |  |  |  |
 |  | Fri Feb 21 | Exam I |  |  |  |
-| 8 | Wed Feb 26 | MCMC diagnostics | Ch. 10 |  |  |
-|  | Thu Feb 27 |  |  |  |  |
+| 8 | Wed Feb 26 | MCMC diagnostics | Ch. 10 |  | hw 5 |
+|  | Thu Feb 27 | lab: Metropolis algo. |  | [💻](/slides/lab9-MH-MCMC.html) |  |
 |  | Fri Feb 28 | diagnostics and MH |  |  |  |
 | 9 | Wed Mar 05 | Gibbs sampling |  |  |  |
 |  | Thu Mar 06 |  |  |  |  |
