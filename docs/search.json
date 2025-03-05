@@ -270,7 +270,7 @@
     "href": "hw/hw06.html",
     "title": "Homework 6",
     "section": "",
-    "text": "6.2 from Hoff. Note the typo: \\(1/\\sigma_j^2\\) is gamma, not \\(1/\\sigma_j\\). Use the code below to load the data.\n\nglucose = readr::read_csv(\"https://sta360-fa24.github.io/data/glucose.csv\")"
+    "text": "6.2 from Hoff. Note the typo: \\(1/\\sigma_j^2\\) is gamma, not \\(1/\\sigma_j\\). Use the code below to load the data.\n\nglucose = readr::read_csv(\"https://sta360-sp25.github.io/data/glucose.csv\")"
   },
   {
     "objectID": "hw/hw06.html#exercise-2",
@@ -284,7 +284,7 @@
     "href": "hw/hw06.html#exercise-3",
     "title": "Homework 6",
     "section": "Exercise 3",
-    "text": "Exercise 3\nSuppose \\(Y\\) is a random normal vector \\(Y \\sim N_p(\\theta, \\Sigma)\\). Let \\(Y_A\\) be the first \\(p_1\\) elements of \\(Y\\) and \\(Y_B\\) be the last \\(p_2 = p - p_1\\) elements, so that \\(Y = (Y_A, Y_B)\\). Similarly, write \\(\\theta = (\\theta_A, \\theta_B)\\). Finally, let\n\\[\n\\Sigma^{-} \\equiv \\Psi = \\left[ {\\begin{array}{cc}\n   \\Psi_{AA} & \\Psi_{AB} \\\\\n   \\Psi_{BA} & \\Psi_{BB} \\\\\n  \\end{array} } \\right]\n\\]\nand note that \\(\\Psi_{AB} = \\Psi_{BA}^T\\). Find the conditional distribution of \\(Y_B\\) given \\(Y_A\\) in terms of \\(\\theta_A\\), \\(\\theta_B\\) and components of \\(\\Psi\\). Try to interpret how \\(E[Y_B|Y_A]\\) differs from \\(E[Y_B]\\) and how \\(V[Y_B|Y_A]\\) differs from \\(V[Y_B]\\).\n\nIdentities for exercise 3\nSome of the following identities will be helpful for interpretation.\nLet\n\\[\n\\Sigma = \\left[ {\\begin{array}{cc}\n   \\Sigma_{AA} & \\Sigma_{AB} \\\\\n   \\Sigma_{BA} & \\Sigma_{BB} \\\\\n  \\end{array} } \\right]\n\\]\nand\n\\[\n\\Psi = \\left[ {\\begin{array}{cc}\n   \\Psi_{AA} & \\Psi_{AB} \\\\\n   \\Psi_{BA} & \\Psi_{BB} \\\\\n  \\end{array} } \\right].\n\\]\nThen\n\\[\n\\begin{aligned}\n\\Psi_{AA}^- &= \\Sigma_{AA} - \\Sigma_{AB} \\Sigma_{BB}^- \\Sigma_{BA}\\\\\n\\Psi_{BB}^- &= \\Sigma_{BB} - \\Sigma_{BA} \\Sigma_{AA}^- \\Sigma_{AB}\\\\\n\\Psi_{AB} &= -\\Psi_{AA} \\Sigma_{AB} \\Sigma_{BB}^-\\\\\n\\Psi_{BA} &= -\\Psi_{BB} \\Sigma_{BA} \\Sigma_{AA}^-,\n\\end{aligned}\n\\]\nand note that \\(\\Sigma_{AB} = \\Sigma_{BA}^T\\) and \\(\\Psi_{AB} = \\Psi_{BA}^T\\)."
+    "text": "Exercise 3\nSuppose \\(Y\\) is a random normal vector \\(Y \\sim N_p(\\theta, \\Sigma)\\). Let \\(Y_A\\) be the first \\(p_1\\) elements of \\(Y\\) and \\(Y_B\\) be the last \\(p_2 = p - p_1\\) elements, so that \\(Y = (Y_A, Y_B)\\). Similarly, write \\(\\theta = (\\theta_A, \\theta_B)\\). Finally, let\n\\[\n\\Sigma^{-} \\equiv \\Psi = \\left[ {\\begin{array}{cc}\n   \\Psi_{AA} & \\Psi_{AB} \\\\\n   \\Psi_{BA} & \\Psi_{BB} \\\\\n  \\end{array} } \\right]\n\\] and note that \\(\\Psi_{AB} = \\Psi_{BA}^T\\). Find the conditional distribution of \\(Y_B\\) given \\(Y_A\\) in terms of \\(\\theta_A\\), \\(\\theta_B\\) and components of \\(\\Psi\\). Try to interpret how \\(E[Y_B|Y_A]\\) differs from \\(E[Y_B]\\) and how \\(V[Y_B|Y_A]\\) differs from \\(V[Y_B]\\).\n\nIdentities for exercise 3\nSome of the following identities will be helpful for interpretation.\nLet\n\\[\n\\Sigma = \\left[ {\\begin{array}{cc}\n   \\Sigma_{AA} & \\Sigma_{AB} \\\\\n   \\Sigma_{BA} & \\Sigma_{BB} \\\\\n  \\end{array} } \\right]\n\\]\nand\n\\[\n\\Psi = \\left[ {\\begin{array}{cc}\n   \\Psi_{AA} & \\Psi_{AB} \\\\\n   \\Psi_{BA} & \\Psi_{BB} \\\\\n  \\end{array} } \\right].\n\\]\nThen\n\\[\n\\begin{aligned}\n\\Psi_{AA}^- &= \\Sigma_{AA} - \\Sigma_{AB} \\Sigma_{BB}^- \\Sigma_{BA}\\\\\n\\Psi_{BB}^- &= \\Sigma_{BB} - \\Sigma_{BA} \\Sigma_{AA}^- \\Sigma_{AB}\\\\\n\\Psi_{AB} &= -\\Psi_{AA} \\Sigma_{AB} \\Sigma_{BB}^-\\\\\n\\Psi_{BA} &= -\\Psi_{BB} \\Sigma_{BA} \\Sigma_{AA}^-,\n\\end{aligned}\n\\]\nand note that \\(\\Sigma_{AB} = \\Sigma_{BA}^T\\) and \\(\\Psi_{AB} = \\Psi_{BA}^T\\)."
   },
   {
     "objectID": "hw/hw07.html",
@@ -2014,5 +2014,12 @@
     "title": "Homework 8",
     "section": "",
     "text": "6.3 from Hoff. You can simulate from a constrained normal distribution with mean mean and standard deviation sd, constrained to lie in the interval \\((a,b)\\) using the following function:\n\nrcnorm&lt;-function(n, mean=0, sd=1, a=-Inf, b=Inf){\n  u = runif(n, pnorm((a - mean) / sd), pnorm((b - mean) / sd))\n  mean + (sd * qnorm(u))\n}\n\nNote that you can use this function to simulate a vector of constrained normal random variables, each with a potentially different mean, standard deviation, and constraints.\nTo load the data for this exercise, run the code below\n\ndivorce = readr::read_csv(\"https://sta360-fa24.github.io/data/divorce.csv\")"
+  },
+  {
+    "objectID": "hw/hw06.html#exercise-1",
+    "href": "hw/hw06.html#exercise-1",
+    "title": "Homework 6",
+    "section": "",
+    "text": "6.2 from Hoff. Note the typo: \\(1/\\sigma_j^2\\) is gamma, not \\(1/\\sigma_j\\). Use the code below to load the data.\n\nglucose = readr::read_csv(\"https://sta360-sp25.github.io/data/glucose.csv\")"
   }
 ]
