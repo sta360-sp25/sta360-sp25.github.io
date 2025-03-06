@@ -1782,7 +1782,7 @@
     "href": "slides/lab6-mcmc-d-practice.html#solution-2",
     "title": "MCMC diagnostics practice",
     "section": "Solution 2",
-    "text": "Solution 2\nWe start around (10, 45) and up sampling around (50, 53). This rules out (A) and perhaps also (B). Notice the axes.\nPlot (C) looks like uncorrelated parameters.\nThe only plot with islands of high posterior density at these regions is plot (D), which shows an additional mode that we haven’t sampled at all.\n\n\n🔗 sta360-sp25.github.io"
+    "text": "Solution 2\nWe start around (10, 45) and up sampling around (50, 53). This rules out (A) and perhaps also (B). Notice the axes.\nPlot (C) looks like uncorrelated parameters.\nThe only plot with islands of high posterior density at these regions is plot (D), which shows an additional mode that we haven’t sampled at all.\n\n\n\n🔗 sta360-sp25.github.io"
   },
   {
     "objectID": "slides/lab7-exam2-prep.html#exercise-1",

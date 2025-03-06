@@ -107,7 +107,7 @@ schedule %>%
 |  | Thu Feb 27 | lab: Metropolis-Hastings and conf. bands |  | [💻](/slides/lab9-MH-MCMC.html) [💻](/slides/lab-conf-band.html) |  |
 |  | Fri Feb 28 | MCMC diagnostics | Ch. 6, 10 | [🗒](/notes/lec09-MCMC.html)[📝](/notes/ergodicMarkovChains.pdf) |  |
 | 9 | Wed Mar 05 | Gibbs sampling | Ch. 6 | [🗒](/notes/lec10-gibbs-sampling.html) |  |
-|  | Thu Mar 06 | lab: MCMC diagnostics |  | [💻](/lab6-mcmc-d-practice.html) |  |
+|  | Thu Mar 06 | lab: MCMC diagnostics |  | [💻](/slides/lab6-mcmc-d-practice.html) |  |
 |  | Fri Mar 07 | multivariate normal | Ch. 7 | [🗒](/notes/lec11-mvn.html) | [hw 6](/hw/hw06.html) |
 | 10 | Wed Mar 12 | NO CLASS |  |  |  |
 |  | Thu Mar 13 | NO CLASS |  |  |  |
