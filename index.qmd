@@ -116,7 +116,7 @@ schedule %>%
 |  | Thu Mar 20 | lab: rstanarm |  | [💻](/slides/lab8-rstan.html) |  |
 |  | Fri Mar 21 | Bayesian regression II | Ch. 9 | [🗒](/notes/lec13-BayesianRegression2.html) |  |
 | 12 | Wed Mar 26 | hierarchical modeling | Ch. 8 | [🗒](/notes/lec15-hierarchical-intro.html) |  |
-|  | Thu Mar 27 |  |  |  |  |
+|  | Thu Mar 27 | lab: probit regression |  | [💻](/slides/probit-lab.html) |  |
 |  | Fri Mar 28 | review |  |  |  |
 | 13 | Wed Apr 02 | Exam II |  |  |  |
 |  | Thu Apr 03 |  |  |  |  |
