@@ -182,7 +182,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Homework 8</h1>
-<p class="subtitle lead">Due Friday November 22 at 5:00pm</p>
+<p class="subtitle lead">Due Friday April 18 at 5:00pm</p>
 </div>
 
 
@@ -201,18 +201,7 @@ window.Quarto = {
 
 <section id="exercise-1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>6.3 from Hoff. You can simulate from a constrained normal distribution with mean <code>mean</code> and standard deviation <code>sd</code>, constrained to lie in the interval <span class="math inline">\((a,b)\)</span> using the following function:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rcnorm<span class="ot">&lt;-</span><span class="cf">function</span>(n, <span class="at">mean=</span><span class="dv">0</span>, <span class="at">sd=</span><span class="dv">1</span>, <span class="at">a=</span><span class="sc">-</span><span class="cn">Inf</span>, <span class="at">b=</span><span class="cn">Inf</span>){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">=</span> <span class="fu">runif</span>(n, <span class="fu">pnorm</span>((a <span class="sc">-</span> mean) <span class="sc">/</span> sd), <span class="fu">pnorm</span>((b <span class="sc">-</span> mean) <span class="sc">/</span> sd))</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  mean <span class="sc">+</span> (sd <span class="sc">*</span> <span class="fu">qnorm</span>(u))</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Note that you can use this function to simulate a vector of constrained normal random variables, each with a potentially different mean, standard deviation, and constraints.</p>
-<p>To load the data for this exercise, run the code below</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>divorce <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://sta360-fa24.github.io/data/divorce.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>10.1 from Hoff (reflecting random walks)</p>
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
@@ -234,12 +223,12 @@ window.Quarto = {
 </div>
 <p>In this exercise, you will build a very simple Bayesian image classifier. Load the training and test data sets using the code below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>yTrain <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://sta360-fa24.github.io/data/hw-digits-train.csv"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>yTest <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://sta360-fa24.github.io/data/hw-digits-test.csv"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>yTrain <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://sta360-sp25.github.io/data/hw-digits-train.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>yTest <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://sta360-sp25.github.io/data/hw-digits-test.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The training data set contains 3822 images like the ones displayed above. Each image is a 32 x 32 bitmap, i.e.&nbsp;1024 pixels, where each pixel is either black (0) or white (1). The 1024 pixels are divided into 64 blocks of 4 x 4 pixels. Each digit in the data set is represented by a vector of these blocks <span class="math inline">\(\mathbf{x} = (x_1, \ldots, x_{64})\)</span> where each element is a count of the white pixels in a block (a number between 0 and 16).</p>
 <p>The 65th column of the data set (<code>id</code>) is the actual digit label.</p>
@@ -251,11 +240,24 @@ window.Quarto = {
 <li><p>Write down the joint density for images with id “j”, <span class="math inline">\(\prod_{k = 1}^{n_j} p(\mathbf{x}_k^{(j)} | \boldsymbol{\pi}^{(j)})\)</span>. Here <span class="math inline">\(n_j\)</span> is the number of images of type <span class="math inline">\(j\)</span> and <span class="math inline">\(\boldsymbol{\pi}^{(j)} = \{\pi_1^{(j)}, \ldots, \pi_{64}^{(j)} \}\)</span></p></li>
 <li><p>How many total unknown parameters are in the complete joint density of all images?</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice that the multinomial sampling model places positive density on <span class="math inline">\(x_i &gt; 16\)</span>, which is impossible in our data. This model is overly simple.</p>
+</div>
+</div>
 <ol start="3" type="a">
 <li>The Dirichlet distribution is the multivariate generalization of the beta distribution. You can read more about it <a href="https://en.wikipedia.org/wiki/Dirichlet_distribution">here</a>. Place a Dirichlet prior on the probability parameters for each of your multinomial models in part b. Let the concentration parameters be all identically 1.</li>
 </ol>
 <ul>
-<li>Sample from the posterior using any method you choose and compute the posterior mean <span class="math inline">\(\hat{\boldsymbol{\pi}}^{(j)}\)</span> for each <span class="math inline">\(j\)</span>. Hint: you may need to look up how to sample from a Dirichlet distribution in R. You may do this manually or find a package with built-in functions.</li>
+<li>Compute the posterior mean <span class="math inline">\(\hat{\boldsymbol{\pi}}^{(j)}\)</span> for each <span class="math inline">\(j\)</span> (or approximate it with Monte Carlo sampling). Hint: you may need to look up how to sample from a Dirichlet distribution in R. You may do this manually or find a package with built-in functions.</li>
 </ul>
 <ol start="4" type="a">
 <li>For each image <span class="math inline">\(\mathbf{x}\)</span> in your testing data set, compute your predicted id according to <span class="math inline">\(\text{argmax}_{j}~~p(\mathbf{x}| \boldsymbol{\hat{\pi}}^{(j)})p(j)\)</span>, where <span class="math inline">\(p(j)\)</span> is the proportion of digit <span class="math inline">\(j\)</span> in the training set. Report the number of correct and incorrect classifications in your testing data set.</li>

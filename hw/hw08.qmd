@@ -1,6 +1,6 @@
 ---
 title: "Homework 8"
-subtitle: "Due Friday November 22 at 5:00pm"
+subtitle: "Due Friday April 18 at 5:00pm"
 mainfont: Lato
 format: 
   html:
@@ -9,23 +9,7 @@ format:
 
 ## Exercise 1
 
-6.3 from Hoff. You can simulate from a constrained normal distribution with mean `mean` and standard deviation `sd`, constrained to lie in the interval $(a,b)$ using the following function:
-
-```{r}
-rcnorm<-function(n, mean=0, sd=1, a=-Inf, b=Inf){
-  u = runif(n, pnorm((a - mean) / sd), pnorm((b - mean) / sd))
-  mean + (sd * qnorm(u))
-}
-```
-
-Note that you can use this function to simulate a vector of constrained normal random variables, each with a potentially different mean, standard deviation, and constraints.
-
-To load the data for this exercise, run the code below
-
-```{r}
-#| eval: false
-divorce = readr::read_csv("https://sta360-fa24.github.io/data/divorce.csv")
-```
+10.1 from Hoff (reflecting random walks)
 
 ## Exercise 2
 
@@ -39,6 +23,7 @@ c. Under the prior distribution $\beta \sim N(0, \tau^2)$, find $E[\beta | y_1, 
 
 ## Exercise 3
 
+
 Handwritten digit classification.
 Data originally sourced from U.S. postal envelopes.
 
@@ -51,10 +36,10 @@ In this exercise, you will build a very simple Bayesian image classifier. Load t
 ```{r}
 #| eval: false
 yTrain = readr::read_csv(
-  "https://sta360-fa24.github.io/data/hw-digits-train.csv")
+  "https://sta360-sp25.github.io/data/hw-digits-train.csv")
 
 yTest = readr::read_csv(
-  "https://sta360-fa24.github.io/data/hw-digits-test.csv"
+  "https://sta360-sp25.github.io/data/hw-digits-test.csv"
 )
 ```
 
@@ -72,10 +57,14 @@ b. Assume each digit (i.e. each `id`) has its own multinomial data generative mo
   - Write down the joint density for images with id "j", $\prod_{k = 1}^{n_j} p(\mathbf{x}_k^{(j)} | \boldsymbol{\pi}^{(j)})$. Here $n_j$ is the number of images of type $j$ and $\boldsymbol{\pi}^{(j)} = \{\pi_1^{(j)}, \ldots, \pi_{64}^{(j)} \}$
 
   - How many total unknown parameters are in the complete joint density of all images?
+  
+::: callout-note
+Notice that the multinomial sampling model places positive density on $x_i > 16$, which is impossible in our data. This model is overly simple.
+:::
 
 c. The Dirichlet distribution is the multivariate generalization of the beta distribution. You can read more about it [here](https://en.wikipedia.org/wiki/Dirichlet_distribution).  Place a Dirichlet prior on the probability parameters for each of your multinomial models in part b. Let the  concentration parameters be all identically 1.
 
-  - Sample from the posterior using any method you choose and compute the posterior mean $\hat{\boldsymbol{\pi}}^{(j)}$ for each $j$. Hint: you may need to look up how to sample from a Dirichlet distribution in R. You may do this manually or find a package with built-in functions.
+  - Compute the posterior mean $\hat{\boldsymbol{\pi}}^{(j)}$ for each $j$ (or approximate it with Monte Carlo sampling). Hint: you may need to look up how to sample from a Dirichlet distribution in R. You may do this manually or find a package with built-in functions.
 
 d. For each image $\mathbf{x}$ in your testing data set, compute your predicted id according to $\text{argmax}_{j}~~p(\mathbf{x}| \boldsymbol{\hat{\pi}}^{(j)})p(j)$, where $p(j)$ is the proportion of digit $j$ in the training set. Report the number of correct and incorrect classifications in your testing data set.
 
