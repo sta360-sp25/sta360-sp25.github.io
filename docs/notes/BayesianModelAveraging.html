@@ -211,8 +211,7 @@ window.Quarto = {
 <p>Consider the standard regression problem,</p>
 <p><span class="math display">\[
 Y | \beta, \sigma^2 \sim N_n(X\beta, \sigma^2 I_n)
-\]</span></p>
-<p>where each term is of typical dimension,</p>
+\]</span> where each term is of typical dimension,</p>
 <ul>
 <li><span class="math inline">\(Y \in \mathbb{R}^n\)</span> vector of observations,</li>
 <li><span class="math inline">\(X \in \mathbb{R}^{n \times p}\)</span> matrix of predictors,</li>
@@ -254,7 +253,7 @@ y_i = z_1 \beta_1 x_{i, 1} + \ldots + z_p \beta_p x_{i,p} + \epsilon
 <p><span class="math display">\[
 Y|\beta, z, \sigma^2 \sim N_n(XZ\beta, \sigma^2 I_n)
 \]</span></p>
-<p>where <span class="math inline">\(Z = z I_p\)</span> is a diagonal matrix.</p>
+<p>where <span class="math inline">\(Z\)</span> is a diagonal matrix with entries <span class="math inline">\(Z_{ii} = z_i\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -289,16 +288,14 @@ E[\beta | y] = \sum_{z} \int \beta p(\beta, z | y) d\beta
 <p>Data generative model:</p>
 <p><span class="math display">\[
 Y|\beta, z, \sigma^2 \sim N_n(X_z\beta_z, \sigma^2 I_n)
-\]</span></p>
-<p>Common prior specification:</p>
+\]</span> Common prior specification:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \beta_z | \sigma^2 &amp;\sim N_z \left(0, g \sigma^2 (X_z^TX_z)^{-1}\right)\\
 1/\sigma^2 &amp;\sim \text{gamma}(\frac{\nu_0}{2}, \frac{\nu_0}{2} \sigma_0^2)\\
 p(z_i = 1) &amp;= \frac{1}{2} \text{ for all i}
 \end{aligned}
-\]</span></p>
-<p>where <span class="math inline">\(g\)</span> is some fixed constant and <span class="math inline">\(\beta_z\)</span> is the set of <span class="math inline">\(\beta\)</span> corresponding to non-zero entries of <span class="math inline">\(z\)</span> (<span class="math inline">\(X_z\)</span> is constructed similarly). The prior on <span class="math inline">\(\beta\)</span> is known as Zellner’s <span class="math inline">\(g\)</span> prior <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The <span class="math inline">\(g\)</span> prior is mathematically convenient and leads to nice marginal distributions for our Gibbs sampler.</p>
+\]</span> where <span class="math inline">\(g\)</span> is some fixed constant and <span class="math inline">\(\beta_z\)</span> is the set of <span class="math inline">\(\beta\)</span> corresponding to non-zero entries of <span class="math inline">\(z\)</span> (<span class="math inline">\(X_z\)</span> is constructed similarly). The prior on <span class="math inline">\(\beta\)</span> is known as Zellner’s <span class="math inline">\(g\)</span> prior <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The <span class="math inline">\(g\)</span> prior is mathematically convenient and leads to nice marginal distributions for our Gibbs sampler.</p>
 <p>Where does the prior variance of <span class="math inline">\(\beta\)</span> come from? Recall: <span class="math inline">\(Var[\hat{\beta}_{OLS}] = \sigma^2 (X^TX)^{-1}\)</span>. So a priori we expect the variance of <span class="math inline">\(\beta\)</span> to look like the OLS variance and <span class="math inline">\(g\)</span> controls the weight of this prior variance (or <span class="math inline">\(1/g\)</span> controls the weight of the precision). Small <span class="math inline">\(g\)</span> implies more prior precision relative to the data.</p>
 <ul>
 <li>Question: what should <span class="math inline">\(g\)</span> be equal to for unit precision?</li>
@@ -312,8 +309,7 @@ p(z_i = 1) &amp;= \frac{1}{2} \text{ for all i}
 \beta_z | X_z, \sigma^2, y \sim N_z\left( A^{-1}b,
 A^{-1}
 \right)
-\]</span></p>
-<p>where <span class="math inline">\(A^{-1} = \sigma^2 \left( \frac{g}{g+1}\right)(X_z^TX_z)^{-1}\)</span> and <span class="math inline">\(b = \frac{1}{\sigma^2} X_z^Ty\)</span>.</p>
+\]</span> where <span class="math inline">\(A^{-1} = \sigma^2 \left( \frac{g}{g+1}\right)(X_z^TX_z)^{-1}\)</span> and <span class="math inline">\(b = \frac{1}{\sigma^2} X_z^Ty\)</span>.</p>
 <p>We can simplify the full conditional notation,</p>
 <p><span class="math display">\[
 \beta_z | X_z, \sigma^2, y \sim N_z\left(
@@ -327,23 +323,20 @@ A^{-1}
 <p>We can integrate out <span class="math inline">\(\beta\)</span> analytically, for a more efficient sampler,</p>
 <p><span class="math display">\[
 1/\sigma^2 | X_z, y \sim \text{gamma}([\nu_0 + n]/2, [\nu_0 \sigma_0^2 + SSR_g^z]/2)
-\]</span></p>
-<p>where <span class="math inline">\(SSR_g^z = y^T(I - \frac{g}{g+1} X_z (X_z^T X_z)^{-1} X_z^T)y\)</span></p>
+\]</span> where <span class="math inline">\(SSR_g^z = y^T(I - \frac{g}{g+1} X_z (X_z^T X_z)^{-1} X_z^T)y\)</span></p>
 </section>
 <section id="z" class="level3">
 <h3 class="anchored" data-anchor-id="z">z</h3>
 <p><span class="math display">\[
 z_j \sim \text{binary}(o_j/(1 + o_j))
-\]</span></p>
-<p>where <span class="math inline">\(p_j\)</span> is the probability that <span class="math inline">\(z_j = 1\)</span>, and is given by</p>
+\]</span> where <span class="math inline">\(p_j\)</span> is the probability that <span class="math inline">\(z_j = 1\)</span>, and is given by</p>
 <p><span class="math display">\[
 o_j = \frac
 {Pr(z_j = 1 | y, X, z_{-j})}
 {Pr(z_j = 0 | y, X, z_{-j})}
 = \frac{p(y|X, z_{-j}, z_j = 1) p(z_j = 1)}
 {p(y|X, z_{-j}, z_j = 0) p(z_j = 0)}
-\]</span></p>
-<p>See page 165 of the book for details on how to compute the marginal likelihood <span class="math inline">\(p(y|X, z)\)</span>.</p>
+\]</span> See page 165 of the book for details on how to compute the marginal likelihood <span class="math inline">\(p(y|X, z)\)</span>.</p>
 </section>
 </div>
 </div>
