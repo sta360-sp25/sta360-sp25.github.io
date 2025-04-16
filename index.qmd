@@ -124,7 +124,7 @@ schedule %>%
 | 14 | Wed Apr 09 | Bayesian inverse problems | [📖](https://www.pnas.org/doi/10.1073/pnas.2409983121) | [🗒](/notes/waterOnMars.html) | [hw 8](/hw/hw08.html) |
 |  | Thu Apr 10 | lab: inverse problems |  | [💻](/slides/BayesianInverseProblem.html) |  |
 |  | Fri Apr 11 | Hamiltonian Monte Carlo | [📖](/readings/readHMC.html) | [🗒](/notes/HamiltonianMonteCarlo.html) |  |
-| 15 | Wed Apr 16 | piors |  |  |  |
+| 15 | Wed Apr 16 | priors |  |            [🗒](/notes/priors.html) | [hw 9](/hw/hw09.html) |
 |  | Thu Apr 17 | review / office hours |  |  |  |
 |  | Fri Apr 18 | Special Topic |  |  |  |
 | 16 | Wed Apr 23 | Practice for final |  |  |  |
