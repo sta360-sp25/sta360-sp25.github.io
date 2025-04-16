@@ -347,7 +347,7 @@
     "href": "hw/hw09.html#exercise-2",
     "title": "Homework 9",
     "section": "Exercise 2",
-    "text": "Exercise 2\n8.3 from Hoff: find the problem setup (definitions of each Greek letter) on page 132 and 133 of the book. Also see, e.g. the notes on hierarchical modeling.\nRun the code below to load the data.\n\nlibrary(readr)\nlibrary(glue)\n\nfor(i in 1:8) {\nassign(paste0(\"school\", i), \n       read_csv(glue(\"https://sta360-fa24.github.io/data/school{i}.csv\")))\n}"
+    "text": "Exercise 2\n8.3 from Hoff: find the problem setup (definitions of each Greek letter) on page 132 and 133 of the book. Also see, e.g. the notes on hierarchical modeling.\nRun the code below to load the data.\n\nlibrary(readr)\nlibrary(glue)\n\nfor(i in 1:8) {\nassign(paste0(\"school\", i), \n       read_csv(glue(\"https://sta360-sp25.github.io/data/school{i}.csv\")))\n}"
   },
   {
     "objectID": "hw/hw09.html#exercise-3",
