@@ -14,6 +14,9 @@ Let $\hat{\theta}$ be an estimator of $\theta$. What does it mean for $\hat{\the
 
 ### Exercise 3
 
+$$
+y_i \sim N(\theta, \sigma^2)
+$$
 `TRUE` or `FALSE`: $\theta \sim N(\bar{y}, 1)$ is a proper prior.
 
 ```{r}

@@ -1,5 +1,5 @@
 ---
-title: "Bonus quiz"
+title: "Quiz"
 ---
 
 To receive credit for this assignment, write your full name at the top of your paper.
