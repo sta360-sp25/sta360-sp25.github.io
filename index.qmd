@@ -126,7 +126,7 @@ schedule %>%
 |  | Fri Apr 11 | Hamiltonian Monte Carlo | [📖](/readings/readHMC.html) | [🗒](/notes/HamiltonianMonteCarlo.html) |  |
 | 15 | Wed Apr 16 | priors |  | [🗒](/notes/priors.html) | [hw 9](/hw/hw09.html) |
 |  | Thu Apr 17 | review / office hours |  |  |  |
-|  | Fri Apr 18 | missing data |  | [.R](/notes/mvn-missing-data.R) |  |
+|  | Fri Apr 18 | missing data |  | [📝](/notes/missing_data.pdf)[.R](/notes/mvn-missing-data.R) |  |
 | 16 | Wed Apr 23 | Practice for final |  |  |  |
 :::
 
