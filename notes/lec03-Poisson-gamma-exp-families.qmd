@@ -43,7 +43,7 @@ yx %>%
 #| echo: true
 #| eval: false
 set.seed(360)
-yx = read_csv("../data/BostonCeltics_Assists_23-24_season.csv")
+yx = read_csv("https://sta360-sp25.github.io/data/BostonCeltics_Assists_23-24_season.csv")
 
 yx %>%
   slice_sample(n = 10) %>%

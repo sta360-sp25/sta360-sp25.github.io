@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -66,10 +66,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-daeb2a00b4514a77614cc4c73639220f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -176,7 +176,6 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#data-generative-model" id="toc-data-generative-model" class="nav-link" data-scroll-target="#data-generative-model">Data-generative model</a></li>
   <li><a href="#prior-beliefs" id="toc-prior-beliefs" class="nav-link" data-scroll-target="#prior-beliefs">Prior beliefs</a></li>
-  <li><a href="#compute-the-posterior" id="toc-compute-the-posterior" class="nav-link" data-scroll-target="#compute-the-posterior">Compute the posterior</a></li>
   </ul></li>
   <li><a href="#exponential-families" id="toc-exponential-families" class="nav-link" data-scroll-target="#exponential-families">Exponential families</a>
   <ul class="collapse">
@@ -248,7 +247,7 @@ window.Quarto = {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">360</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>yx <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"../data/BostonCeltics_Assists_23-24_season.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>yx <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://sta360-sp25.github.io/data/BostonCeltics_Assists_23-24_season.csv"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>yx <span class="sc">%&gt;%</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
@@ -303,10 +302,7 @@ p(y_1,\ldots y_n | \theta) = \prod_{i = 1}^n \frac{(\theta x_i)^{y_i} e^{-\theta
 \theta &amp;\sim gamma(a, b)\\
 p(\theta | a, b) &amp;= \frac{b^{a}}{\Gamma(a)} \theta^{a - 1} e^{-b \theta}
 \end{aligned}
-\]</span></p>
-</section>
-<section id="compute-the-posterior" class="level3">
-<h3 class="anchored" data-anchor-id="compute-the-posterior">Compute the posterior</h3>
+\]</span> ### Compute the posterior</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Exercise</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Solution</a></li></ul>
 <div class="tab-content">
@@ -381,11 +377,9 @@ Note
 <p><span class="math inline">\(t(y)\)</span> is referred to as the <em>sufficient statistic</em>.</p>
 </div>
 </div>
-<p>If <span class="math inline">\(p(y|\theta)\)</span> belongs in the exponential family, then the conjugate prior is</p>
-<p><span class="math display">\[
+<p>If <span class="math inline">\(p(y|\theta)\)</span> belongs in the exponential family, then the conjugate prior is <span class="math display">\[
 p(\phi | n_0, t_0) = \kappa(n_0, t_0)c(\phi)^{n_0} e^{n_0 t_0 \phi},
-\]</span></p>
-<p>where <span class="math inline">\(\kappa(n_0, t_0)\)</span> is a normalizing constant.</p>
+\]</span> where <span class="math inline">\(\kappa(n_0, t_0)\)</span> is a normalizing constant.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -405,8 +399,7 @@ Notes about the prior
 <p>The resulting posterior is</p>
 <p><span class="math display">\[
 p(\phi | y_1,\ldots y_n) \propto p \left(\phi | n_0 + n, \frac{n_0 t_0 + n \sum t(y_i)/n}{n_0 + n}\right)
-\]</span></p>
-<p>In words, one can show that the kernel of the posterior of <span class="math inline">\(\phi\)</span> is proportional to the kernel of the prior of <span class="math inline">\(\phi\)</span> with specific parameters. Thereby, we have conjugacy.</p>
+\]</span> In words, one can show that the kernel of the posterior of <span class="math inline">\(\phi\)</span> is proportional to the kernel of the prior of <span class="math inline">\(\phi\)</span> with specific parameters. Thereby, we have conjugacy.</p>
 <section id="example-offline-poisson-density" class="level3">
 <h3 class="anchored" data-anchor-id="example-offline-poisson-density">Example offline: Poisson density</h3>
 
@@ -497,8 +490,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -609,7 +600,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
