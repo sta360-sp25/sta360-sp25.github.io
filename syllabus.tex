@@ -1,0 +1,391 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={STA 360: Bayesian methods and modern statistics},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{STA 360: Bayesian methods and modern statistics}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Spring 2025}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section{Syllabus}\label{syllabus}
+
+\subsubsection{Course description}\label{course-description}
+
+This course introduces Bayesian modeling and inference, motivated by
+real world examples. Course topics include Bayes' theorem,
+exchangeability, conjugate priors, Markov chain Monte Carlo (MCMC),
+Gibbs sampling, Metropolis-Hastings, hierarchical modeling, Bayesian
+regression and generalized linear models. We compare and contrast
+Bayesian methods to the frequentist paradigm. By the end of this course
+students should feel comfortable (1) writing Bayesian models and, when
+appropriate, (2) sampling from the posterior using MCMC to make
+inference.
+
+\subsubsection{Logistics}\label{logistics}
+
+\paragraph{Teaching team \& office
+hours}\label{teaching-team-office-hours}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contact
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Office hours
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Location
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dr.~Alexander Fisher & \url{aaf29@duke.edu} & We/Th/Fr: 10:00am-11:00am
+& Old Chem 211A/B \\
+Matt O'Donnell & \url{matthew.l.odonnell@duke.edu} & We: 6:00pm-8:00pm &
+Old Chem 203B \\
+Sophia Yang & \url{sophia.yang@duke.edu} & Mo: 12:00pm-2:00pm & Old Chem
+203B \\
+Yihao Gu & \url{yihao.gu@duke.edu} & We: 2:30pm-4:30pm & Old Chem
+203B \\
+Yueqi Guo & \url{yueqi.guo@duke.edu} & Th: 4:30pm-6:30pm & Old Chem
+203B \\
+\end{longtable}
+
+\paragraph{Meetings}\label{meetings}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lecture & We/Fr 11:45am - 1:00pm & Reuben-Cooke Building 130 \\
+Lab 01 & Th 1:25pm - 2:40pm & Old Chemistry 201 \\
+Lab 02 & Th 3:05pm - 4:20pm & Old Chemistry 201 \\
+\end{longtable}
+
+Course website:
+\href{https://sta360-sp25.github.io/}{sta360-sp25.github.io}
+
+\subsubsection{Course material}\label{course-material}
+
+\begin{itemize}
+\item
+  \href{https://pdhoff.github.io/book/}{A First Course in Bayesian
+  Statistical Methods}. As a Duke student, an electronic version of the
+  book is freely available to you on Springer link. Check the errata at
+  the link above.
+\item
+  \href{./chapterSummaries.html}{Chapter summaries}. I compile major
+  take-away points from each section. Review these to help prepare for
+  exams.
+\item
+  We will use the statistical software package R on homework asignments
+  in this course. R is freely available at
+  \url{http://www.r-project.org/}. RStudio, the popular IDE for R, is
+  freely available at \url{https://posit.co/downloads/}.
+\end{itemize}
+
+\subsubsection{Schedule of topics}\label{schedule-of-topics}
+
+Part I: The Bayesian modeling toolkit
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Review of probability
+\item
+  Conjugate statistical models
+\item
+  Posterior summaries and Monte Carlo sampling
+\item
+  Markov chain Monte Carlo (Metropolis-Hastings)
+\end{enumerate}
+
+Part II: Statistical model building and analysis
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Semi-conjugate models and Gibbs sampling
+\item
+  Linear regression
+\item
+  Generalized linear models
+\item
+  Hierarchical models
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Evaluation}\label{evaluation}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3684}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6316}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Assignment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Homework (40\%) & Individual take-home assignments, submitted to
+Gradescope. \\
+Midterms (30\%) & Two in-class exams. \\
+Final exam (25\%) & Cumulative final during final's week. \\
+Quizzes (5\%) & In-class pop quizzes. \\
+\end{longtable}
+
+A \(>= 93\), A- \(< 93\), B+ \(< 90\), B \(< 87\), B- \(< 83\), C+
+\(<80\), C \(< 77\), C- \(< 73\), D+ \(< 70\), D \(< 67\), D- \(< 63\),
+F \(< 60\)
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{A note on quizzes}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, toptitle=1mm, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, left=2mm]
+
+On random class days, there will be a brief quiz on the previous
+lectures. If you score \(>60\%\) cumulatively on your final quiz grade,
+you will receive full participation credit. Your lowest \textbf{two}
+quizzes will also be dropped.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, bottomtitle=1mm, breakable, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{A note on exams}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, toptitle=1mm, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, left=2mm]
+
+If you miss either midterm 1 or midterm 2, \textbf{and have an excused
+absence}, your missing midterm grade will be replaced by your final exam
+grade. You must take at least 1 midterm and the final exam to pass the
+course.
+
+\end{tcolorbox}
+
+\subsubsection{Policies}\label{policies}
+
+\textbf{Academic integrity}
+
+By enrolling in this course, you commit to upholding Duke's community
+standard reproduced as follows:
+
+\begin{quote}
+I will not lie, cheat, or steal in my academic endeavors;
+
+I will conduct myself honorably in all my endeavors; and
+
+I will act if the Standard is compromised.
+\end{quote}
+
+Any violations of academic integrity will automatically result in a 0
+for the assignment and will be reported to the Office of Student Conduct
+for further action. For the Exams and Quizzes, students are required to
+work alone. For the Homework assignments, students may work with a study
+group but each student must write up and submit their own answers.
+
+\newpage
+
+\textbf{Late work}
+
+Late homework may be submitted within 48 hours of the assignment
+deadline. Late homework submitted within 24 hours (even 1 minute late)
+will receive a 5\% late penalty. Late work submitted between 24 to 48
+hours of the deadline will receive a 10\% late penalty. Work submitted
+after 48 hours will not be accepted. Exams cannot be turned in late and
+can only be excused under exceptional circumstances. The Duke policy for
+illness requires a short-term illness report or a letter from the Dean;
+except in emergencies, all other absenteeism must be approved in advance
+(e.g., an athlete who must miss class may be excused by prior
+arrangement for specific days). For emergencies, email notification is
+needed at the first reasonable time.
+
+\textbf{Errors in grading}
+
+Errors in grading must be brought to the attention of the TA or
+instructor during office hours within 1 week of receiving the grade.
+
+
+
+
+\end{document}
